@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+.gemini/
+.stitch/
+*.log
+dist/
+build/
+.env

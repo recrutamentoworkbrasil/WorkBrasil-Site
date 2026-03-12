@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="fav-icon.png" />
+  <title>Work Brasil - Consultoria em Recrutamento</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#253b56", // Deep Navy Blue from logo
+            accent: "#4ee3b2",  // Mint Green/Teal from logo
+            "background-light": "#f8f9fa",
+            "background-dark": "#1a202c",
+            "card-light": "#ffffff",
+            "card-dark": "#2d3748",
+            "text-light": "#333333",
+            "text-dark": "#f7fafc",
+            "text-muted-light": "#6b7280",
+            "text-muted-dark": "#a0aec0",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* High-end Transition Definition */
+    .transition-custom {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Animated Underline for Nav Links */
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #4ee3b2;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Scroll Reveal Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal-on-load {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    /* Delays for staggered reveals */
+    .delay-100 {
+      animation-delay: 100ms;
+    }
+
+    .delay-200 {
+      animation-delay: 200ms;
+    }
+
+    .delay-300 {
+      animation-delay: 300ms;
+    }
+
+    .delay-400 {
+      animation-delay: 400ms;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+  <header
+    class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="index.html" class="flex-shrink-0 flex items-center">
+          <img alt="Work Brasil Logo" class="h-8 w-auto" src="logo-work-brasil.png" />
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <nav class="flex space-x-8">
+            <a class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 text-sm font-medium transition-colors nav-link"
+              href="sobre.html">Sobre nós</a>
+            <a class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 text-sm font-medium transition-colors nav-link"
+              href="contato.html">Contato</a>
+          </nav>
+          <a class="bg-accent hover:bg-opacity-90 text-primary font-semibold py-2 px-6 rounded-full transition-colors text-sm transition-custom hover:scale-105 hover:shadow-lg"
+            href="#fale-conosco">Garanta sua vaga</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="relative min-h-screen flex flex-col justify-between overflow-hidden bg-gray-900">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img alt="Professional Environment" class="w-full h-full object-cover opacity-60"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbuB4_8Z4TUlLADFUzbCjBrk0587FKP2L80CG_9GmwBKTfgNxu66-hBBGwb71TDYD3cLC4OuO5CJmCo7EPecZhDlpZbO5wNYIJPk17oAwEjqu09syLEIRLbbHnjWvFSGD_vn2djV3eS-7Citf95585Vxes-HLtNjqKXFydZ1kLkP2cNODRHusP3yMFoNNKQO4SIpy3IeQjlNIxh7lV6S5m9twJe8rkdKiovt6pZLfCnI9VDJjaA26mMZu_VabrACKDuukRhm0MwvFT" />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+    </div>
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-48 pb-20 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Side Text -->
+        <div class="text-left reveal-on-load">
+          <span
+            class="inline-block py-1 px-3 rounded-full bg-accent/20 text-accent text-xs font-semibold mb-6 border border-accent/30 tracking-widest uppercase">
+            #1 Consultoria em RH
+          </span>
+          <h1 class="text-5xl lg:text-7xl font-bold text-white mb-8 leading-[1.1]">
+            Há 20 anos conectando <br /> <span class="text-accent">talentos certos</span> <br /> às empresas certas
+          </h1>
+          <div class="flex flex-wrap gap-4 mt-10"><a
+              class="px-8 py-4 bg-accent text-primary font-bold rounded-full hover:bg-white transition-all shadow-lg transition-custom hover:scale-105 hover:shadow-xl"
+              href="#fale-conosco">Garanta sua vaga</a></div>
+        </div>
+        <!-- Right Side Floating Card -->
+        <div class="hidden lg:flex justify-end">
+          <div
+            class="relative w-80 h-96 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl group">
+            <img alt="Featured Job"
+              class="w-full h-1/2 object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEMdkViVVBq-fzrI0x9oPghnxLInEL_d5Tk16Wli2pyqs9_fpqXUDOPqbl36I7reijczDM0xG8YH10Tu_4VjOMfiu2y7f21h-DVLucMsqnplzA2EfoOVmsG7Zxy9HNMBrvpMkFC6jdc4Gne4aQRyqg5NV2trPTSrcFEU87UEpSAwuFwOHYpCzEodVTrFVIU7-nUuczsIPXH_J8ZC5sXLXRUzbQG834_B-JpSjPiK-lckQ75hai5Xj0arteEYPBedqkuRpsxvmY75_g" />
+            <div class="p-6 flex flex-col justify-between h-1/2">
+              <div>
+                <p class="text-accent text-xs font-bold uppercase tracking-widest mb-2">Vaga em Destaque</p>
+                <h3 class="text-white text-xl font-bold">Gerente de Operações Sênior</h3>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-300 text-sm">São Paulo, SP</span>
+                <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white">
+                  <span class="material-symbols-outlined text-sm text-accent">north_east</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Integrated Metrics Bar with Custom Shape -->
+    <div class="relative z-20 w-full">
+      <div class="max-w-7xl mx-auto flex justify-end">
+        <div
+          class="bg-white w-full lg:w-3/4 rounded-tl-[100px] p-8 lg:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8 shadow-2xl reveal-on-load delay-300">
+          <div class="text-left reveal-on-load">
+            <div class="text-4xl font-bold text-primary mb-1">+20</div>
+            <div class="text-xs font-semibold text-gray-500 uppercase tracking-tighter">Anos de <br /> Mercado</div>
+          </div>
+          <div class="text-left reveal-on-load">
+            <div class="text-4xl font-bold text-primary mb-1">+50k</div>
+            <div class="text-xs font-semibold text-gray-500 uppercase tracking-tighter">Vagas <br /> Fechadas</div>
+          </div>
+          <div class="text-left reveal-on-load">
+            <div class="text-4xl font-bold text-primary mb-1">98%</div>
+            <div class="text-xs font-semibold text-gray-500 uppercase tracking-tighter">Taxa de <br /> Assertividade
+            </div>
+          </div>
+          <div class="text-left reveal-on-load">
+            <div class="text-4xl font-bold text-primary mb-1">+2k</div>
+            <div class="text-xs font-semibold text-gray-500 uppercase tracking-tighter">Empresas <br /> Clientes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-background-light dark:bg-background-dark transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-base text-accent font-semibold tracking-wide uppercase">Nossas Soluções</h2>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary dark:text-white sm:text-4xl">
+          Especialidade em cada nível hierárquico
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-text-muted-light dark:text-text-muted-dark mx-auto">
+          Oferecemos processos estruturados e personalizados para encontrar o candidato ideal para a sua necessidade.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 group transition-custom hover:-translate-y-3 hover:shadow-2xl reveal-on-load">
+          <div
+            class="w-14 h-14 rounded-lg bg-primary/5 dark:bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors duration-300 text-accent">
+            <span class="material-icons text-3xl">people_alt</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Recrutamento &amp; Seleção</h3>
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm leading-relaxed">Processos ágeis para
+            vagas de grande volume, garantindo qualidade e aderência cultural em tempo recorde.</p>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 group transition-custom hover:-translate-y-3 hover:shadow-2xl reveal-on-load delay-100">
+          <div
+            class="w-14 h-14 rounded-lg bg-primary/5 dark:bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors duration-300 text-accent">
+            <span class="material-icons text-3xl">engineering</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Operacional &amp; Admin</h3>
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm leading-relaxed">Seleção criteriosa
+            para funções essenciais do dia a dia, focando em estabilidade e competência técnica.</p>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 group transition-custom hover:-translate-y-3 hover:shadow-2xl reveal-on-load delay-200">
+          <div
+            class="w-14 h-14 rounded-lg bg-primary/5 dark:bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors duration-300 text-accent">
+            <span class="material-icons text-3xl">psychology</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Estratégico &amp; Liderança</h3>
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm leading-relaxed">Executive search e
+            hunting especializado para posições chave, avaliando fit cultural e visão de negócios.</p>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-800 group transition-custom hover:-translate-y-3 hover:shadow-2xl reveal-on-load delay-300">
+          <div
+            class="w-14 h-14 rounded-lg bg-primary/5 dark:bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-primary transition-colors duration-300 text-accent">
+            <span class="material-icons text-3xl">dashboard_customize</span>
+          </div>
+          <h3 class="text-xl font-bold text-primary dark:text-white mb-3">Projetos Personalizados</h3>
+          <p class="text-text-muted-light dark:text-text-muted-dark mb-4 text-sm leading-relaxed">Soluções sob medida
+            para expansões, startups ou necessidades específicas de reestruturação de equipes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-3xl font-bold text-primary dark:text-white mb-8">Para Empresas</h2>
+          <div class="space-y-8">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-accent font-bold">1
+                </div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg leading-6 font-semibold text-primary dark:text-white">Alinhamento de Perfil</h4>
+                <p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">Entendemos profundamente a
+                  cultura da sua empresa e os requisitos técnicos e comportamentais da vaga.</p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-accent font-bold">2
+                </div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg leading-6 font-semibold text-primary dark:text-white">Hunting e Triagem</h4>
+                <p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">Buscamos ativamente no mercado
+                  e avaliamos os candidatos através de testes e entrevistas focadas.</p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-primary text-accent font-bold">3
+                </div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg leading-6 font-semibold text-primary dark:text-white">Apresentação de Finalistas</h4>
+                <p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">Enviamos um short-list com
+                  pareceres detalhados dos profissionais mais aderentes.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold text-primary dark:text-white mb-8">Para Candidatos</h2>
+          <div class="space-y-8">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center h-10 w-10 rounded-full bg-accent/20 text-accent font-bold border border-accent">
+                  1</div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg leading-6 font-semibold text-primary dark:text-white">Cadastro de Currículo</h4>
+                <p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">Insira seus dados em nosso
+                  banco de talentos de forma simples e rápida.</p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center h-10 w-10 rounded-full bg-accent/20 text-accent font-bold border border-accent">
+                  2</div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg leading-6 font-semibold text-primary dark:text-white">Match com Vagas</h4>
+                <p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">Nosso sistema e equipe cruzam
+                  seu perfil com as oportunidades abertas.</p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div
+                  class="flex items-center justify-center h-10 w-10 rounded-full bg-accent/20 text-accent font-bold border border-accent">
+                  3</div>
+              </div>
+              <div class="ml-4">
+                <h4 class="text-lg leading-6 font-semibold text-primary dark:text-white">Entrevistas</h4>
+                <p class="mt-2 text-base text-text-muted-light dark:text-text-muted-dark">Participe de entrevistas
+                  construtivas e receba feedback durante o processo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-10">
+            <a class="inline-flex items-center px-8 py-4 bg-accent text-primary font-bold rounded-full hover:bg-white transition-all shadow-lg transition-custom hover:scale-105 hover:shadow-xl"
+              href="#fale-conosco">
+              Garanta sua vaga
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-background-light dark:bg-background-dark transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+        <div class="mb-10 lg:mb-0">
+          <img alt="Equipe Work Brasil trabalhando"
+            class="rounded-2xl shadow-xl w-full object-cover h-[500px] transition-custom hover:scale-[1.02] hover:shadow-2xl"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2uMtMLEq9GJcwOugpczT8m52BE_RYirG-Q-LXieF61eJXgQDuBk97Yq2aIKLoSN0wuQL9SK8qEitV19XJ39ZYY2fKRacnrCXIGttDR1M6syF6zECKhRACLXEeVPCUWXWjt9uCjhEuXAgh-E3twKP64SIiKT1xDB31afynpd01eskG_63VaKnX4-w_ehQ7HuDy2MxjHD0wq8Y2u_zh9sX09rrMQaLbbqEAG3249n0sXvY6Ikv33UgkzJPKRb_5EhW5YzTgBXMMXag" />
+        </div>
+        <div>
+          <h2 class="text-3xl font-extrabold text-primary dark:text-white sm:text-4xl mb-6 reveal-on-load">
+            Construindo histórias de sucesso há duas décadas.
+          </h2>
+          <p class="text-lg text-text-muted-light dark:text-text-muted-dark mb-6 leading-relaxed reveal-on-load">
+            A Work Brasil nasceu com o propósito de humanizar o processo de recrutamento e seleção. Em 20 anos de
+            trajetória, entendemos que por trás de cada currículo existe um projeto de vida, e por trás de cada vaga, um
+            desafio de negócios.
+          </p>
+          <p class="text-lg text-text-muted-light dark:text-text-muted-dark mb-8 leading-relaxed reveal-on-load">
+            Nossa ética, transparência e agilidade nos tornaram referência no mercado nacional, atendendo desde startups
+            promissoras até grandes corporações multinacionais.
+          </p>
+          <div class="flex space-x-6">
+            <div>
+              <span class="block text-2xl font-bold text-accent">Ética</span>
+              <span class="text-sm text-text-muted-light dark:text-text-muted-dark">Em todas as relações</span>
+            </div>
+            <div>
+              <span class="block text-2xl font-bold text-accent">Agilidade</span>
+              <span class="text-sm text-text-muted-light dark:text-text-muted-dark">Sem perder a qualidade</span>
+            </div>
+            <div>
+              <span class="block text-2xl font-bold text-accent">Foco</span>
+              <span class="text-sm text-text-muted-light dark:text-text-muted-dark">No resultado e nas pessoas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="fale-conosco" class="py-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-8">Dúvidas Frequentes</h2>
+          <div class="space-y-4">
+            <details class="bg-white/10 p-6 rounded-xl cursor-pointer group transition-custom hover:bg-white/20">
+              <summary class="text-white font-medium list-none flex justify-between items-center">
+                Qual o prazo médio de fechamento de vaga?
+                <span class="material-icons text-accent group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <p class="text-gray-300 mt-4 text-sm leading-relaxed">
+                Depende do nível hierárquico e da complexidade da vaga. Em média, vagas operacionais levam de 7 a 15
+                dias, enquanto vagas estratégicas podem levar de 20 a 45 dias.
+              </p>
+            </details>
+            <details class="bg-white/10 p-6 rounded-xl cursor-pointer group transition-custom hover:bg-white/20">
+              <summary class="text-white font-medium list-none flex justify-between items-center">
+                Vocês oferecem garantia sobre a contratação?
+                <span class="material-icons text-accent group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <p class="text-gray-300 mt-4 text-sm leading-relaxed">
+                Sim, oferecemos período de reposição sem custo adicional caso o candidato não se adapte ou seja
+                desligado durante o período de experiência acordado.
+              </p>
+            </details>
+            <details class="bg-white/10 p-6 rounded-xl cursor-pointer group transition-custom hover:bg-white/20">
+              <summary class="text-white font-medium list-none flex justify-between items-center">
+                Atendem todas as regiões do Brasil?
+                <span class="material-icons text-accent group-open:rotate-180 transition-transform">expand_more</span>
+              </summary>
+              <p class="text-gray-300 mt-4 text-sm leading-relaxed">
+                Sim, realizamos processos seletivos em âmbito nacional, utilizando ferramentas de avaliação online e
+                vídeo-entrevistas para candidatos fora da nossa sede.
+              </p>
+            </details>
+
+            <!-- WhatsApp Contact Alternative -->
+            <div class="mt-12 pt-12 border-t border-white/10 reveal-on-load">
+              <p class="text-white/80 text-lg mb-6 leading-relaxed">Você pode entrar em contato também pelo WhatsApp</p>
+              <a href="https://wa.me/5511992804765?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20vaga%2C%20vim%20pelo%20site%20da%20WorkBrasil." target="_blank"
+                class="inline-flex items-center space-x-3 px-8 py-4 bg-[#25D366] text-white font-bold rounded-full hover:bg-[#128C7E] transition-all shadow-xl group text-sm">
+                <svg class="h-11 w-11 fill-current group-hover:rotate-12 transition-transform" viewBox="0 0 24 24">
+                  <path
+                    d="M12.031 6.062c-3.411 0-6.177 2.766-6.177 6.177 0 1.258.384 2.422 1.037 3.393l-.68 2.484 2.544-.666a6.138 6.138 0 0 0 3.276.966c3.412 0 6.178-2.766 6.178-6.177s-2.766-6.177-6.178-6.177zm3.177 8.654c-.13.364-.65.707-1.056.812-.406.104-.935.187-2.618-.541-1.683-.728-2.76-2.431-2.844-2.541-.083-.11-.676-.893-.676-1.703 0-.811.417-1.21.564-1.375.148-.164.325-.205.433-.205.108 0 .217.001.312.006.096.005.224-.036.35.267.126.303.433 1.055.471 1.13.037.075.062.163.012.261-.05.099-.115.158-.182.235-.067.077-.141.171-.2.246-.07.086-.143.18-.061.32.082.14.364.6.782.973.541.48 1.0.629 1.14.699.14.07.225.058.309-.039.083-.097.356-.414.45-.555.094-.141.189-.118.318-.07.129.047.818.387.959.458.141.071.235.106.27.165.034.058.034.341-.1.705z" />
+                </svg>
+                <span>Inicie uma conversa</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-xl relative overflow-hidden">
+          <!-- Success State Overlay -->
+          <div id="form-success"
+            class="absolute inset-0 bg-white/95 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 opacity-0 pointer-events-none">
+            <div class="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center text-accent mb-6">
+              <span class="material-icons text-5xl">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary mb-2">Mensagem Enviada!</h3>
+            <p class="text-text-muted-light mb-8">Agradecemos seu contato. Nossa equipe retornará em breve.</p>
+            <button type="button" onclick="resetFormUI()"
+              class="text-primary font-bold hover:text-accent transition-colors uppercase text-sm tracking-widest">Enviar
+              nova mensagem</button>
+          </div>
+
+          <h3 class="text-2xl font-bold text-primary mb-6">Fale Conosco</h3>
+          <form id="contact-form" class="space-y-4">
+            <!-- ⬇️ SUBSTITUA 'SUA_CHAVE_AQUI' pela chave obtida em web3forms.com -->
+            <input type="hidden" name="access_key" value="6da5d209-af6d-432c-8dc3-f18ea16930bf" />
+            <!-- Personaliza o assunto do email recebido -->
+            <input type="hidden" name="subject" value="Novo contato pelo site - Work Brasil" />
+            <!-- Botifap de anti-spam do Web3Forms -->
+            <input type="checkbox" name="botcheck" style="display:none" />
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1" for="name">Nome completo</label>
+              <input
+                class="block w-full border-gray-300 rounded-sm shadow-sm focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50"
+                id="name" name="name" type="text" required />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1" for="email">Email</label>
+              <input
+                class="block w-full border-gray-300 rounded-sm shadow-sm focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50"
+                id="email" name="email" type="email" required />
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-1" for="address">Endereço</label>
+                <input
+                  class="block w-full border-gray-300 rounded-sm shadow-sm focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50"
+                  id="address" name="address" type="text" />
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-1" for="phone">Telefone</label>
+                <input
+                  class="block w-full border-gray-300 rounded-sm shadow-sm focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50"
+                  id="phone" name="phone" type="tel" required />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1" for="subject">Assunto</label>
+              <input
+                class="block w-full border-gray-300 rounded-sm shadow-sm focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50"
+                id="subject" name="subject" type="text" required />
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-gray-900 mb-1" for="message">Mensagem</label>
+              <textarea
+                class="block w-full border border-gray-300 rounded-sm shadow-sm focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50"
+                id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Error Message -->
+            <div id="form-error"
+              class="hidden text-red-500 text-sm font-medium bg-red-50 p-3 rounded-sm border border-red-100 italic">
+              Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.
+            </div>
+
+            <div class="pt-2">
+              <button id="submit-button"
+                class="w-full sm:w-auto flex justify-center items-center py-3 px-10 border border-transparent text-sm font-bold text-white bg-primary hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all uppercase transition-custom hover:scale-105 hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed"
+                type="submit">
+                <span id="button-text">ENVIAR</span>
+                <svg id="loading-spinner" class="hidden animate-spin ml-3 h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-[#1a2a40] py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-1">
+          <img alt="Work Brasil Logo" class="h-8 w-auto mb-6" src="logo-white-work-brasil.png" />
+          <p class="text-gray-400 text-sm leading-relaxed mb-6">
+            Conectando talentos e oportunidades há mais de 20 anos no mercado brasileiro.
+          </p>
+          <div class="flex space-x-4">
+            <a class="text-gray-400 hover:text-accent transition-colors" href="#">
+              <span class="sr-only">LinkedIn</span>
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                </path>
+              </svg>
+            </a>
+            <a class="text-gray-400 hover:text-accent transition-colors" href="#">
+              <span class="sr-only">Instagram</span>
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+                <path clip-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Para Candidatos</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li><a class="hover:text-accent transition-colors" href="#fale-conosco">Vagas Abertas</a></li>
+            <li><a class="hover:text-accent transition-colors" href="#fale-conosco">Cadastrar Currículo</a></li>
+            <li><a class="hover:text-accent transition-colors" href="#">Dicas de Carreira</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Contato</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-center"><span class="material-icons text-sm mr-2 text-accent">email</span>
+              contato@workbrasil.com.br</li>
+            <li class="flex items-center"><span class="material-icons text-sm mr-2 text-accent">phone</span> (11)
+              99280-4765</li>
+            <li class="flex items-start"><span class="material-icons text-sm mr-2 mt-1 text-accent">location_on</span>
+              Alameda Rio Negro, 503 - 23° e 24° andares
+              difício Escritórios Rio Negro</br>Alphaville - Barueri SP
+              </br>CEP: 06454-000</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm text-gray-500 mb-4 md:mb-0">
+          © <span id="current-year">2026</span> Work Brasil Consultoria. Todos os direitos reservados.
+        </p>
+        <div class="flex space-x-6 text-sm text-gray-500">
+          <a class="hover:text-white transition-colors" href="privacidade.html">Política de Privacidade</a>
+          <a class="hover:text-white transition-colors" href="privacidade.html">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
