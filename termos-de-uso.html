@@ -86,23 +86,30 @@
     .delay-300 { animation-delay: 300ms; }
     .delay-400 { animation-delay: 400ms; }
   </style>
+
+    <script>
+        // Remove .html from the URL for a clean slug
+        if (window.location.pathname.endsWith('.html')) {
+            window.history.replaceState(null, '', window.location.pathname.replace(/\.html$/, '') + window.location.search);
+        }
+    </script>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
 <header class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-20">
-<a href="./" class="flex-shrink-0 flex items-center">
+<a href="index.html" class="flex-shrink-0 flex items-center">
 <img alt="Work Brasil Logo" class="h-8 w-auto" src="logo-work-brasil.png"/>
 </a>
         <div class="flex items-center space-x-4 md:space-x-8">
           <nav class="hidden md:flex space-x-8">
             <a class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 text-sm font-medium transition-colors nav-link"
-              href="sobre">Sobre nós</a>
+              href="sobre.html">Sobre nós</a>
             <a class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 text-sm font-medium transition-colors nav-link"
-              href="contato">Contato</a>
+              href="contato.html">Contato</a>
           </nav>
           <a class="bg-accent hover:bg-opacity-90 text-primary font-semibold py-2 px-4 sm:px-6 rounded-full transition-colors text-xs sm:text-sm transition-custom hover:scale-105 hover:shadow-lg"
-            href="./#fale-conosco">Garanta sua vaga</a>
+            href="index.html#fale-conosco">Garanta sua vaga</a>
         </div>
 </div>
 </div>
@@ -189,8 +196,8 @@
 <div>
 <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Para Candidatos</h4>
 <ul class="space-y-3 text-sm text-gray-400">
-<li><a class="hover:text-accent transition-colors" href="./#fale-conosco">Vagas Abertas</a></li>
-<li><a class="hover:text-accent transition-colors" href="./#fale-conosco">Cadastrar Currículo</a></li>
+<li><a class="hover:text-accent transition-colors" href="index.html#fale-conosco">Vagas Abertas</a></li>
+<li><a class="hover:text-accent transition-colors" href="index.html#fale-conosco">Cadastrar Currículo</a></li>
 <li><a class="hover:text-accent transition-colors" href="#">Dicas de Carreira</a></li>
 </ul>
 </div>
@@ -216,8 +223,8 @@
           © <span id="current-year">2026</span> Work Brasil Consultoria. Todos os direitos reservados.
         </p>
 <div class="flex space-x-6 text-sm text-gray-500">
-<a class="hover:text-white transition-colors" href="privacidade">Política de Privacidade</a>
-<a class="hover:text-white transition-colors" href="privacidade">Termos de Uso</a>
+<a class="hover:text-white transition-colors" href="privacidade.html">Política de Privacidade</a>
+<a class="hover:text-white transition-colors" href="privacidade.html">Termos de Uso</a>
 </div>
 </div>
 </div>
