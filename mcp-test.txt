@@ -1,2 +1,0 @@
-Teste de conexão MCP GitHub - Realizado em 2026-03-13.
-Este arquivo confirma que o agente possui permissões de push no repositório.
