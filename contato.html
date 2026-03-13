@@ -126,13 +126,13 @@
         <!-- Contact Info Grid -->
         <section class="py-20 px-6 max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-card-light dark:bg-card-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm text-center group hover:shadow-xl transition-all duration-300 reveal-on-load">
+                <a href="https://wa.me/5511992804765?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20vaga%2C%20vim%20pelo%20site%20da%20WorkBrasil." target="_blank" class="block bg-card-light dark:bg-card-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm text-center group hover:shadow-xl transition-all duration-300 reveal-on-load">
                     <div class="text-accent mb-4 flex justify-center group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-5xl">chat</span>
                     </div>
                     <h3 class="text-xl font-bold text-primary dark:text-white mb-2">WhatsApp</h3>
-                    <p class="text-text-muted-light dark:text-text-muted-dark">(11) 3456-7890</p>
-                </div>
+                    <p class="text-text-muted-light dark:text-text-muted-dark">(11) 99280-4765</p>
+                </a>
                 <div class="bg-card-light dark:bg-card-dark p-8 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm text-center group hover:shadow-xl transition-all duration-300 reveal-on-load delay-100">
                     <div class="text-accent mb-4 flex justify-center group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-5xl">mail</span>
@@ -153,38 +153,66 @@
         <!-- Form and Map -->
         <section class="py-24 bg-gray-50 dark:bg-slate-900/50 px-6 text-center transition-colors duration-300">
             <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 text-left">
-                <div class="bg-card-light dark:bg-card-dark p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 reveal-on-load">
+                <div class="bg-card-light dark:bg-card-dark p-10 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800 relative overflow-hidden reveal-on-load">
+                    <!-- Success State Overlay -->
+                    <div id="form-success" class="absolute inset-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8 transition-all duration-500 opacity-0 pointer-events-none">
+                        <div class="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center text-accent mb-6">
+                            <span class="material-icons text-5xl">check_circle</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary dark:text-white mb-2">Mensagem Enviada!</h3>
+                        <p class="text-text-muted-light dark:text-text-muted-dark mb-8">Agradecemos seu contato. Nossa equipe retornará em breve.</p>
+                        <button type="button" onclick="resetFormUI()" class="text-primary dark:text-white font-bold hover:text-accent transition-colors uppercase text-sm tracking-widest">Enviar nova mensagem</button>
+                    </div>
+
                     <h2 class="text-3xl font-bold text-primary dark:text-white mb-6 uppercase tracking-tighter">Envie sua Mensagem</h2>
-                    <form class="space-y-6">
+                    <form id="contact-form" class="space-y-4">
+                        <input type="hidden" name="access_key" value="6da5d209-af6d-432c-8dc3-f18ea16930bf" />
+                        <input type="hidden" name="subject" value="Novo contato pelo site - Work Brasil" />
+                        <input type="checkbox" name="botcheck" style="display:none" />
                         <div>
-                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-2">Nome Completo</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-accent outline-none dark:bg-slate-800 transition-all" placeholder="Seu nome">
+                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-1" for="name">Nome completo</label>
+                            <input class="block w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm focus:ring-2 focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50 dark:bg-slate-800 transition-all text-primary dark:text-white" id="name" name="name" type="text" required />
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-2">E-mail Corporativo</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-accent outline-none dark:bg-slate-800 transition-all" placeholder="seu@email.com">
+                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-1" for="email">E-mail</label>
+                            <input class="block w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm focus:ring-2 focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50 dark:bg-slate-800 transition-all text-primary dark:text-white" id="email" name="email" type="email" required />
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-1" for="address">Endereço</label>
+                                <input class="block w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm focus:ring-2 focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50 dark:bg-slate-800 transition-all text-primary dark:text-white" id="address" name="address" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-1" for="phone">Telefone</label>
+                                <input class="block w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm focus:ring-2 focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50 dark:bg-slate-800 transition-all text-primary dark:text-white" id="phone" name="phone" type="tel" required />
+                            </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-2">Assunto</label>
-                            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-accent outline-none dark:bg-slate-800 transition-all">
-                                <option>Recrutamento & Seleção</option>
-                                <option>Vagas</option>
-                                <option>Parcerias</option>
-                                <option>Outros</option>
-                            </select>
+                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-1" for="subject">Assunto</label>
+                            <input class="block w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm focus:ring-2 focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50 dark:bg-slate-800 transition-all text-primary dark:text-white" id="subject" name="subject" type="text" required />
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-2">Mensagem</label>
-                            <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-800 focus:ring-2 focus:ring-accent outline-none dark:bg-slate-800 transition-all" placeholder="Como podemos ajudar?"></textarea>
+                            <label class="block text-sm font-bold text-primary dark:text-slate-300 mb-1" for="message">Mensagem</label>
+                            <textarea class="block w-full px-4 py-3 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm focus:ring-2 focus:ring-accent focus:border-accent sm:text-sm bg-gray-50/50 dark:bg-slate-800 transition-all text-primary dark:text-white" id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-accent font-bold py-4 rounded-xl shadow-lg transition-all uppercase tracking-widest transition-custom hover:scale-[1.02] hover:shadow-xl">
-                            Enviar Mensagem
-                        </button>
+
+                        <div id="form-error" class="hidden text-red-500 text-sm font-medium bg-red-50 p-3 rounded-xl border border-red-100 italic">
+                            Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.
+                        </div>
+
+                        <div class="pt-2">
+                            <button id="submit-button" class="w-full flex justify-center items-center py-4 px-10 border border-transparent text-sm font-bold text-primary bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent rounded-xl shadow-lg transition-all uppercase tracking-widest transition-custom hover:scale-[1.02] hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed" type="submit">
+                                <span id="button-text">ENVIAR MENSAGEM</span>
+                                <svg id="loading-spinner" class="hidden animate-spin ml-3 h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                            </button>
+                        </div>
                     </form>
                 </div>
                 <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-100 dark:border-gray-800 min-h-[400px] relative reveal-on-load delay-200">
-                    <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 animate-pulse"></div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975!2d-46.658!3d-23.561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da56c367%3A0x2289eb52f5d812c8!2zQXYuIFBhdWxpc3RhLCAxMDAwIC0gQmVsYSBWaXN0YSwgU8OjbyBQYXVsbyAtIFNQLCAwMTMxMC0xMDA!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=Alameda%20Rio%20Negro%2C%20503%20-%20Alphaville%2C%20Barueri%20SP&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
