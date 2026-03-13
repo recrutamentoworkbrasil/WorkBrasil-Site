@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>  <link rel="icon" type="image/png" href="fav-icon.png" />
+  <title>Termos de Uso - Work Brasil</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#253b56", // Deep Navy Blue from logo
+            accent: "#4ee3b2",  // Mint Green/Teal from logo
+            "background-light": "#f8f9fa",
+            "background-dark": "#1a202c",
+            "card-light": "#ffffff",
+            "card-dark": "#2d3748",
+            "text-light": "#333333",
+            "text-dark": "#f7fafc",
+            "text-muted-light": "#6b7280",
+            "text-muted-dark": "#a0aec0",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+    <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* High-end Transition Definition */
+    .transition-custom {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Animated Underline for Nav Links */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #4ee3b2;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Scroll Reveal Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .reveal-on-load {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    
+    /* Delays for staggered reveals */
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+    .delay-400 { animation-delay: 400ms; }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+<header class="fixed w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<a href="/" class="flex-shrink-0 flex items-center">
+<img alt="Work Brasil Logo" class="h-8 w-auto" src="logo-work-brasil.png"/>
+</a>
+        <div class="flex items-center space-x-4 md:space-x-8">
+          <nav class="hidden md:flex space-x-8">
+            <a class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 text-sm font-medium transition-colors nav-link"
+              href="/sobre">Sobre nós</a>
+            <a class="text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent px-3 py-2 text-sm font-medium transition-colors nav-link"
+              href="/contato">Contato</a>
+          </nav>
+          <a class="bg-accent hover:bg-opacity-90 text-primary font-semibold py-2 px-4 sm:px-6 rounded-full transition-colors text-xs sm:text-sm transition-custom hover:scale-105 hover:shadow-lg"
+            href="/#fale-conosco">Garanta sua vaga</a>
+        </div>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative py-20 flex items-center justify-center overflow-hidden bg-background-light dark:bg-slate-900 transition-colors duration-300">
+<div class="relative z-20 text-center px-4 max-w-4xl reveal-on-load">
+<h1 class="text-primary dark:text-white text-4xl md:text-6xl font-bold mb-6 tracking-tighter uppercase leading-[1.1]">Termos de <span class="text-accent">Uso</span></h1>
+<p class="text-text-muted-light dark:text-text-muted-dark text-lg font-medium max-w-2xl mx-auto">
+                    Transparência e proteção das regras de uso da plataforma Work Brasil.
+                </p>
+</div>
+</section>
+
+<!-- Content Section -->
+<section class="py-24 px-6 reveal-on-load">
+<div class="max-w-4xl mx-auto prose prose-slate dark:prose-invert">
+    <p class="mb-8 italic text-text-muted-light">Última atualização: Maio de 2024</p>
+    
+    <h2 class="text-3xl font-bold text-primary dark:text-white mt-12 mb-6">1. Aceitação dos Termos</h2>
+    <p class="mb-8">Ao acessar ou usar a plataforma Work Brasil, você concorda integralmente em se vincular a estes Termos de Uso. Este documento constitui um contrato legal entre você e a Work Brasil. Caso discorde de qualquer cláusula, solicitamos que interrompa imediatamente o uso de nossos serviços.</p>
+    
+    <h2 class="text-3xl font-bold text-primary dark:text-white mt-12 mb-6">2. Uso da Plataforma</h2>
+    <p class="mb-4">Nossa plataforma opera como um ecossistema digital conectando talentos e oportunidades. As regras de uso variam de acordo com o seu perfil:</p>
+    
+    <div class="grid md:grid-cols-2 gap-8 my-10">
+        <div class="bg-background-light dark:bg-card-dark border border-gray-100 dark:border-gray-800 p-8 rounded-2xl hover:border-accent transition-colors group shadow-sm">
+            <div class="text-accent mb-6 flex justify-start">
+                <span class="material-symbols-outlined text-5xl">person_search</span>
+            </div>
+            <h3 class="text-primary dark:text-white text-xl font-bold mb-4 uppercase tracking-tight">Para Candidatos</h3>
+            <ul class="list-disc pl-6 space-y-3">
+                <li>Cadastro de currículo e perfil gratuito.</li>
+                <li>Obrigatoriedade de fornecer dados verídicos e atualizados.</li>
+                <li>Proibição de compartilhamento de acessos com terceiros.</li>
+            </ul>
+        </div>
+        <div class="bg-background-light dark:bg-card-dark border border-gray-100 dark:border-gray-800 p-8 rounded-2xl hover:border-accent transition-colors group shadow-sm">
+            <div class="text-accent mb-6 flex justify-start">
+                <span class="material-symbols-outlined text-5xl">corporate_fare</span>
+            </div>
+            <h3 class="text-primary dark:text-white text-xl font-bold mb-4 uppercase tracking-tight">Para Empresas</h3>
+            <ul class="list-disc pl-6 space-y-3">
+                <li>Uso sujeito a planos de assinatura ou contratos específicos.</li>
+                <li>Responsabilidade total pelo conteúdo das vagas publicadas.</li>
+                <li>Compromisso com a ética e diversidade nos processos seletivos.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2 class="text-3xl font-bold text-primary dark:text-white mt-12 mb-6">3. Propriedade Intelectual</h2>
+    <p class="mb-8">Todo o ecossistema visual e funcional da Work Brasil, incluindo algoritmos, design de interface e conteúdos proprietários, é protegido por leis de direitos autorais. A reprodução não autorizada é estritamente proibida.</p>
+    
+    <h2 class="text-3xl font-bold text-primary dark:text-white mt-12 mb-6">4. Limitação de Responsabilidade</h2>
+    <p class="mb-8">A Work Brasil atua como facilitadora de conexões. Não garantimos a contratação de candidatos nem a eficácia imediata das vagas para empresas. O uso da plataforma é de sua inteira responsabilidade.</p>
+    
+    <h2 class="text-3xl font-bold text-primary dark:text-white mt-12 mb-6">5. Foro e Legislação Aplicável</h2>
+    <p class="mb-8">Estes termos são regidos pelas leis do Brasil. Fica eleito o foro da comarca de São Paulo, SP, para a resolução de quaisquer disputas legais.</p>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#1a2a40] py-12 border-t border-white/10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<img alt="Work Brasil Logo" class="h-8 w-auto mb-6" src="logo-white-work-brasil.png"/>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+            Conectando talentos e oportunidades há mais de 20 anos no mercado brasileiro.
+          </p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-accent transition-colors" href="#">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="text-gray-400 hover:text-accent transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Para Candidatos</h4>
+<ul class="space-y-3 text-sm text-gray-400">
+<li><a class="hover:text-accent transition-colors" href="/#fale-conosco">Vagas Abertas</a></li>
+<li><a class="hover:text-accent transition-colors" href="/#fale-conosco">Cadastrar Currículo</a></li>
+<li><a class="hover:text-accent transition-colors" href="#">Dicas de Carreira</a></li>
+</ul>
+</div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 uppercase text-sm tracking-wider">Contato</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-center"><span class="material-icons text-sm mr-2 text-accent">email</span>
+              contato@workbrasil.com.br</li>
+            <li class="flex items-center"><span class="material-icons text-sm mr-2 text-accent">phone</span> (11)
+              99280-4765</li>
+            <li class="flex items-start"><span class="material-icons text-sm mr-2 mt-1 text-accent">location_on</span>
+              <div>
+                Alameda Rio Negro, 503 - 23° andar<br>
+                Alphaville - Barueri SP<br>
+                CEP: 06454-000
+              </div>
+            </li>
+          </ul>
+        </div>
+</div>
+<div class="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+<p class="text-sm text-gray-500 mb-4 md:mb-0">
+          © <span id="current-year">2026</span> Work Brasil Consultoria. Todos os direitos reservados.
+        </p>
+<div class="flex space-x-6 text-sm text-gray-500">
+<a class="hover:text-white transition-colors" href="/privacidade">Política de Privacidade</a>
+<a class="hover:text-white transition-colors" href="/privacidade">Termos de Uso</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>
